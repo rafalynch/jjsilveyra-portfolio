@@ -13,7 +13,7 @@ export default function MainGallery({ paintings }: MainGalleryProps) {
       {paintings.map((painting) => {
         return (
           <>
-            <div className={styles.painting}>
+            <div data-aos="fade-in" className={styles.painting}>
               <Image
                 layout="fill"
                 objectFit={"contain"}

@@ -12,9 +12,14 @@ interface HomeProps {
 
 function Home({ homeImage }: HomeProps) {
   return (
-    <div className={styles.container}>
+    <div
+      className={styles.container}
+      data-aos="fade-in"
+      data-aos-duration="1000"
+    >
       <Head>
         <title>JJSilveyra</title>
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
         <meta name="description" content="Artist" />
       </Head>
       <main className={styles.main}>

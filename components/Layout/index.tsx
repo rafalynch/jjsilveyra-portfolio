@@ -10,7 +10,9 @@ export default function Layout({ children }: LayoutProps) {
   return (
     <>
       <Header />
-      <main>{children}</main>
+      <main data-aos="fade-in" data-aos-duration="1000">
+        {children}
+      </main>
     </>
   );
 }

@@ -3,7 +3,7 @@ import styles from "./index.module.css";
 
 import Layout from "../../components/Layout";
 
-export default function () {
+export default function NotFound() {
   return (
     <div>
       <Layout>
