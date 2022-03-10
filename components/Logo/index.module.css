@@ -1,0 +1,27 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  font-size: 72px;
+  margin: 10px;
+  cursor: pointer;
+}
+@media (max-width: 720px) {
+  .title {
+    font-size: 46px;
+  }
+}
+
+.subtitle {
+  margin: 0;
+  font-size: 13px;
+  letter-spacing: 0.565em;
+}
+@media (max-width: 720px) {
+  .subtitle {
+    font-size: 10px;
+  }
+}

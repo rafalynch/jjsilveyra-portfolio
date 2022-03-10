@@ -1,2 +1,7 @@
-.main {
+.logo_container {
+  position: absolute;
+  z-index: 3;
+  width: 100vw;
+  margin: auto;
+  top: 40%;
 }
