@@ -1,4 +1,5 @@
 import * as contentful from "contentful";
+import resolveResponse from "contentful-resolve-response";
 
 const client = contentful.createClient({
   space: process.env.CONTENTFUL_SPACE_ID || "",
@@ -10,9 +11,8 @@ export async function getHomeImage() {
 }
 
 export async function getAllPaintings() {
-  return await client
-    .getEntries({
-      content_type: "pintura",
-    })
-    .catch(console.error);
+  const data = await client.getEntries({
+    content_type: "pintura",
+  });
+  return data.stringifySafe();
 }

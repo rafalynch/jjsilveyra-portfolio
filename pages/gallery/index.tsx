@@ -33,7 +33,8 @@ function Gallery({ paintingsRes }: GalleryProps) {
 }
 
 export async function getServerSideProps() {
-  const paintingsRes = await getAllPaintings();
+  const data = await getAllPaintings();
+  const paintingsRes = JSON.parse(data);
 
   return {
     props: { paintingsRes },
