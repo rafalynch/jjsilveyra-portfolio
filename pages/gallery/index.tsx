@@ -13,7 +13,11 @@ function Gallery({ paintingsRes }: GalleryProps) {
   const paintings = paintingsRes.items.map((item: any) => {
     return {
       title: item.fields.titulo,
-      image: item.fields.foto.fields.file.url,
+      image: {
+        url: item.fields.foto.fields.file.url,
+        width: item.fields.foto.fields.file.details.image.width,
+        height: item.fields.foto.fields.file.details.image.height,
+      },
       isAvailable: item.fields.disponible,
       size: item.fields.medida,
       year: item.fields.year,

@@ -13,11 +13,15 @@ export default function MainGallery({ paintings }: MainGalleryProps) {
       {paintings.map((painting) => {
         return (
           <>
-            <div data-aos="fade-in" className={styles.painting}>
+            <div
+              key={painting.title}
+              data-aos="fade-in"
+              className={styles.painting}
+            >
               <Image
-                layout="fill"
-                objectFit={"contain"}
-                src={"http:" + painting.image}
+                width={painting.image.width}
+                height={painting.image.height}
+                src={"https:" + painting.image.url}
               ></Image>
             </div>
           </>
