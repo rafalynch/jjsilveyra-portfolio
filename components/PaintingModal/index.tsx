@@ -17,7 +17,6 @@ export default function PaintingModal(props: PaintingModalProps) {
   return (
     <div>
       <Modal
-        scroll={"body"}
         className={styles.modalContainer}
         onClose={props.handleToggle}
         open={props.isOpen}

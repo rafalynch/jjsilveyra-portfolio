@@ -2,6 +2,7 @@ import { Asset } from "contentful";
 import Head from "next/head";
 import { getHomeImage } from "../services/api";
 import styles from "../styles/Home.module.css";
+import Link from "next/link";
 
 import HomeImage from "../components/HomeImage";
 import Logo from "../components/Logo";
@@ -26,7 +27,9 @@ function Home({ homeImage }: HomeProps) {
       <main className={styles.main}>
         <div className={styles.logo_container}>
           <Logo />
-          <HomeButton>OBRAS</HomeButton>
+          <Link href={"/gallery"} passHref>
+            <HomeButton>OBRAS</HomeButton>
+          </Link>
         </div>
         <HomeImage homeImage={homeImage}></HomeImage>
       </main>

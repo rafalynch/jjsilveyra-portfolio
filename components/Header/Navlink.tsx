@@ -16,11 +16,11 @@ export default function Navlink({ children, href }: NavlinkProps) {
     if (router.pathname == href) {
       setIsSelected(true);
     }
-  }, [router]);
+  }, [router, href]);
 
   return (
     <>
-      <Link href={href}>
+      <Link href={href} passHref>
         <a className={styles.link + " " + (isSelected && styles.selected)}>
           {children}
         </a>
