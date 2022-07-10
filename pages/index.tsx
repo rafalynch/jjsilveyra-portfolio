@@ -5,6 +5,7 @@ import styles from "../styles/Home.module.css";
 
 import HomeImage from "../components/HomeImage";
 import Logo from "../components/Logo";
+import HomeButton from "../components/HomeButton";
 
 interface HomeProps {
   homeImage: Asset;
@@ -25,6 +26,7 @@ function Home({ homeImage }: HomeProps) {
       <main className={styles.main}>
         <div className={styles.logo_container}>
           <Logo />
+          <HomeButton>OBRAS</HomeButton>
         </div>
         <HomeImage homeImage={homeImage}></HomeImage>
       </main>

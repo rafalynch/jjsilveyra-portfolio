@@ -15,6 +15,7 @@ function HomeImage({ homeImage }: HomeImageProps) {
       layout="fill"
       objectFit="cover"
       src={"https:" + homeImage.fields.file.url}
+      alt="home"
     ></Image>
   );
 }

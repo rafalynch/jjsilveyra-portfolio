@@ -1,0 +1,15 @@
+.painting {
+  display: block;
+  max-width: 300px;
+  min-width: 200px;
+}
+
+.image {
+  filter: brightness(100%);
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.image:hover {
+  filter: brightness(60%);
+}

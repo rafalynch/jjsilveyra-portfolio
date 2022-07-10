@@ -1,4 +1,5 @@
 import * as contentful from "contentful";
+import safeJsonStringify from "safe-json-stringify";
 
 const client = contentful.createClient({
   space: process.env.CONTENTFUL_SPACE_ID || "",
@@ -13,12 +14,20 @@ export async function getAllPaintings() {
   const data = await client.getEntries({
     content_type: "pintura",
   });
-  return data.stringifySafe();
+
+  return JSON.parse(data.stringifySafe());
 }
 
 export async function getAllCollections() {
   const data = await client.getEntries({
     content_type: "collection",
   });
-  return data.stringifySafe();
+
+  return JSON.parse(data.stringifySafe());
+}
+
+export async function getCollectionByEntryId(entryId: string) {
+  const data: any = await client.getEntry(entryId);
+
+  return JSON.parse(safeJsonStringify(data));
 }

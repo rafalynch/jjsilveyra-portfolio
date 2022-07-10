@@ -6,9 +6,3 @@
   align-items: bottom;
   padding: 20px;
 }
-
-.painting {
-  display: block;
-  max-width: 300px;
-  min-width: 200px;
-}

@@ -7,12 +7,15 @@ import { getAllCollections } from "../../services/api";
 import { Collection } from "../../types";
 
 interface CollectionsProps {
-  collectionsData: EntryCollection<unknown>;
+  data: EntryCollection<unknown>;
 }
 
-function Collections({ collectionsData }: CollectionsProps) {
-  const collections: Collection[] = collectionsData.items.map((item: any) => {
+function Collections({ data }: CollectionsProps) {
+  console.log(data);
+
+  const collections: Collection[] = data.items.map((item: any) => {
     return {
+      id: item.sys.id,
       title: item.fields.title,
       image: item.fields.image.fields.file.url,
       pinturas: {},
@@ -23,12 +26,9 @@ function Collections({ collectionsData }: CollectionsProps) {
     <>
       <Layout>
         <div className={styles.container}>
-          {collections.map((col) => {
+          {collections.map((col, index) => {
             return (
-              <CollectionBanner
-                key={col.title}
-                collection={col}
-              ></CollectionBanner>
+              <CollectionBanner key={index} collection={col}></CollectionBanner>
             );
           })}
         </div>
@@ -39,10 +39,9 @@ function Collections({ collectionsData }: CollectionsProps) {
 
 export async function getServerSideProps() {
   const data = await getAllCollections();
-  const collectionsData = JSON.parse(data);
 
   return {
-    props: { collectionsData },
+    props: { data },
   };
 }
 

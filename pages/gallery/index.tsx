@@ -6,11 +6,13 @@ import MainGallery from "../../components/MainGallery";
 import { getAllPaintings } from "../../services/api";
 
 interface GalleryProps {
-  paintingsRes: EntryCollection<unknown>;
+  data: EntryCollection<unknown>;
 }
 
-function Gallery({ paintingsRes }: GalleryProps) {
-  const paintings = paintingsRes.items.map((item: any) => {
+function Gallery({ data }: GalleryProps) {
+  console.log(data);
+
+  const paintings = data.items.map((item: any) => {
     return {
       title: item.fields.titulo,
       image: {
@@ -38,10 +40,9 @@ function Gallery({ paintingsRes }: GalleryProps) {
 
 export async function getServerSideProps() {
   const data = await getAllPaintings();
-  const paintingsRes = JSON.parse(data);
 
   return {
-    props: { paintingsRes },
+    props: { data },
   };
 }
 

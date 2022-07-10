@@ -1,0 +1,94 @@
+
+.modalContainer {
+  outline: 0,
+}
+
+.modal {
+  position: absolute;
+  top: 5%;
+  bottom: 5%;
+  left: 12%;
+  right: 12%;
+  background-color: white;
+  box-shadow: 20;
+  align-items: center;
+  display: flex;
+  justify-content: space-evenly;
+  border: none;
+  outline: none;
+}
+
+.modal:focus {
+  outline: none !important;
+}
+
+.infoContainer {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+
+.imageContainer {
+  width: 50%;
+}
+
+.paintTitle {
+  font-size: 48px;
+  margin: 10px 0;
+}
+
+.paintType {
+  font-size: 24px;
+  margin: 0;
+  
+}
+
+.paintSize {
+  font-size: 20px;
+  margin: 0;
+  
+}
+
+.paintYear {
+  font-size: 20px;
+  color: gray;
+  margin: 0;
+}
+
+.available {
+  font-size: 16px;
+  padding: 5px;
+  background-color: rgb(211, 240, 188);
+  width: 150px;
+  border-radius: 5%;
+}
+
+.sold {
+  font-size: 16px;
+  padding: 5px;
+  background-color: rgb(255, 160, 160);
+  width: 150px; 
+  border-radius: 5%;
+}
+
+@media (max-width: 600px) {
+  .modal {
+    flex-direction: column;
+    top: 5%;
+    bottom: 5%;
+  }
+  .infoContainer {
+    width: 90%;
+  }
+  
+  .imageContainer {
+    width: 90%;
+  }
+
+  .paintTitle {
+    font-size: 34px;
+  }
+  
+}
