@@ -31,3 +31,9 @@ export async function getCollectionByEntryId(entryId: string) {
 
   return JSON.parse(safeJsonStringify(data));
 }
+
+export async function getBioByEntryId() {
+  const data: any = await client.getEntry("7p2Ywe4gK2smjeYlL040nH");
+
+  return JSON.parse(safeJsonStringify(data));
+}

@@ -1,0 +1,39 @@
+.bioContainer {
+  padding: 15px;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 5%;
+}
+
+.imageContainer{
+  width: 300px;
+  height: 450px;
+  position: relative;
+}
+
+.paragraph {
+  text-align: justify;
+  text-indent: 10px;
+  line-height: 25px;
+}
+
+.paragraphContainer {
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20%;
+}
+
+@media (max-width: 600px) {
+  .paragraphContainer {
+    width: 100%;
+  }
+  
+}
