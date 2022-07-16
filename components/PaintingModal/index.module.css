@@ -32,6 +32,18 @@
 
 .imageContainer {
   width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imageContainer figure{
+  background-color: white;
+  color: white;
+}
+
+.image {
+  display: none;
 }
 
 .paintTitle {
@@ -76,8 +88,8 @@
 @media (max-width: 600px) {
   .modal {
     flex-direction: column;
-    top: 5%;
-    bottom: 5%;
+    top: 15%;
+    bottom: 15%;
   }
   .infoContainer {
     width: 90%;
