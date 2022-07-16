@@ -27,9 +27,7 @@ function Home({ homeImage }: HomeProps) {
       <main className={styles.main}>
         <div className={styles.logo_container}>
           <Logo />
-          <Link href={"/gallery"} passHref>
-            <HomeButton>OBRAS</HomeButton>
-          </Link>
+          <HomeButton />
         </div>
         <HomeImage homeImage={homeImage}></HomeImage>
       </main>
