@@ -7,6 +7,7 @@ import { Box } from "@mui/material";
 import { ImageList } from "@mui/material";
 import { ImageListItem } from "@mui/material";
 import PaintingModal from "../PaintingModal";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 interface MainGalleryProps {
   paintings: Painting[];
@@ -20,6 +21,8 @@ export default function MainGallery({ paintings }: MainGalleryProps) {
     setIsModalOpen(!isModalOpen);
   };
 
+  const mobile = useMediaQuery("(max-width:600px)");
+
   return (
     <>
       <PaintingModal
@@ -28,7 +31,7 @@ export default function MainGallery({ paintings }: MainGalleryProps) {
         handleToggle={handleToggle}
       />
       <Box sx={{ padding: "15px" }}>
-        <ImageList cols={4} gap={20}>
+        <ImageList cols={mobile ? 1 : 4} sx={{ padding: "15px" }} gap={20}>
           {paintings.map((item, index) => (
             <ImageListItem key={index}>
               <PaintingCard
