@@ -4,6 +4,7 @@ import { Button } from "@mui/material";
 import { Painting } from "../../types";
 import { Modal } from "@mui/material";
 import Image from "next/image";
+import ImageZoom from "react-image-zooom";
 
 import styles from "./index.module.css";
 
@@ -23,14 +24,11 @@ export default function PaintingModal(props: PaintingModalProps) {
       >
         <div className={styles.modal} data-aos="zoom-in">
           <div className={styles.imageContainer}>
-            <Image
+            <ImageZoom
               className={styles.image}
               src={"https:" + props.selectedPaint?.image.url}
               alt={props.selectedPaint?.title}
-              height={props.selectedPaint?.image.height}
-              width={props.selectedPaint?.image.width}
-              layout="responsive"
-            />
+            ></ImageZoom>
           </div>
           <div className={styles.infoContainer}>
             <p className={styles.paintTitle}>{props.selectedPaint?.title}</p>
