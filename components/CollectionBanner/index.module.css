@@ -24,3 +24,10 @@
 .image:hover {
   filter: brightness(100%);
 }
+
+@media (max-width: 600px) {
+  .title {
+    left: 25px;
+  }
+  
+}
