@@ -6,3 +6,7 @@
   align-items: bottom;
   padding: 20px;
 }
+
+.image-list-item {
+  overflow-y: hidden;
+}

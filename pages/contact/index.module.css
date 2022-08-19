@@ -1,0 +1,19 @@
+.container {
+  margin: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.social {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  position: relative;
+}
+
+.label {
+  font-weight: 500;
+  cursor: pointer;
+}

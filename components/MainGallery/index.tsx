@@ -30,19 +30,24 @@ export default function MainGallery({ paintings }: MainGalleryProps) {
         isOpen={isModalOpen}
         handleToggle={handleToggle}
       />
-      <Box sx={{ padding: "15px" }}>
-        <ImageList cols={mobile ? 1 : 4} sx={{ padding: "15px" }} gap={20}>
-          {paintings.map((item, index) => (
-            <ImageListItem key={index}>
-              <PaintingCard
-                handleToggleModal={handleToggle}
-                handleSelectPainting={setSelectedPainting}
-                painting={item}
-              />
-            </ImageListItem>
-          ))}
-        </ImageList>
-      </Box>
+
+      <ImageList
+        variant="masonry"
+        cols={mobile ? 1 : 4}
+        sx={{ padding: "15px" }}
+        gap={20}
+        className={styles["image-list-item"]}
+      >
+        {paintings.map((item, index) => (
+          <ImageListItem key={index} data-aos="fade-up">
+            <PaintingCard
+              handleToggleModal={handleToggle}
+              handleSelectPainting={setSelectedPainting}
+              painting={item}
+            />
+          </ImageListItem>
+        ))}
+      </ImageList>
     </>
   );
 }
