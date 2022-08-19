@@ -22,6 +22,19 @@ function Home({ homeImage }: HomeProps) {
       <Head>
         <title>JJSilveyra</title>
         <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+        <link rel="shortcut icon" href="/images/favicon.ico" />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/images/favicon-32x32.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/images/favicon-16x16.png"
+        />
         <meta name="description" content="Artist" />
       </Head>
       <main className={styles.main}>
