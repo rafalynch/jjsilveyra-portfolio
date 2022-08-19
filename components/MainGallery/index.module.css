@@ -10,3 +10,7 @@
 .image-list-item {
   overflow-y: hidden;
 }
+
+.list {
+  overflow: hidden;
+}
