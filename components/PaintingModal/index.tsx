@@ -26,7 +26,9 @@ export default function PaintingModal(props: PaintingModalProps) {
       <div className={styles.modalBody}>
         <div className={styles.imageContainer}>
           <Zoom>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
+              data-aos="fade-in"
               className={styles.image}
               alt=""
               src={"https:" + props.selectedPaint?.image.url}
