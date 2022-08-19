@@ -3,47 +3,45 @@
   outline: 0,
 }
 
-.modal {
+.modalBody {
   position: absolute;
-  top: 5%;
-  bottom: 5%;
-  left: 12%;
-  right: 12%;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   background-color: white;
-  box-shadow: 20;
-  align-items: center;
   display: flex;
-  justify-content: space-evenly;
-  border: none;
-  outline: none;
+  align-items: center;
+  justify-content: center;
+  min-width: 65vw;
+  min-height: 70vh;
 }
+
 
 .modal:focus {
   outline: none !important;
 }
 
 .infoContainer {
-  width: 30%;
   display: flex;
   flex-direction: column;
   text-align: center;
   align-items: center;
+  width: 50%;
 }
 
 .imageContainer {
   width: 50%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.imageContainer figure{
-  background-color: white;
-  color: white;
+  padding: 25px;
 }
 
 .image {
-  display: none;
+  object-fit: contain;
+  max-height: 100%;
+  max-width: 100%;
 }
 
 .paintTitle {
@@ -86,10 +84,8 @@
 }
 
 @media (max-width: 600px) {
-  .modal {
+  .modalBody {
     flex-direction: column;
-    top: 15%;
-    bottom: 15%;
   }
   .infoContainer {
     width: 90%;
