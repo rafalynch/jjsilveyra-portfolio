@@ -39,7 +39,7 @@ export default function MainGallery({ paintings }: MainGalleryProps) {
         className={styles["image-list-item"]}
       >
         {paintings.map((item, index) => (
-          <ImageListItem key={index} data-aos="fade-up" className={styles.list}>
+          <ImageListItem key={index} className={styles.list}>
             <PaintingCard
               handleToggleModal={handleToggle}
               handleSelectPainting={setSelectedPainting}
