@@ -17,10 +17,8 @@
   position: relative;
 }
 
-.paragraph {
-  text-align: justify;
-  text-indent: 10px;
-  line-height: 25px;
+.paragraph li p {
+  margin: 6px 0;
 }
 
 .paragraphContainer {
