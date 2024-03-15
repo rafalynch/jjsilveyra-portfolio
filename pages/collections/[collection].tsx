@@ -14,21 +14,26 @@ interface CollectionsProps {
 }
 
 function CollectionPage({ collection }: CollectionsProps) {
-  const paintings = collection?.fields.pinturas.map((item: any) => {
-    return {
-      title: item.fields.titulo,
-      image: {
-        url: item.fields.foto.fields.file.url,
-        width: item.fields.foto.fields.file.details.image.width,
-        height: item.fields.foto.fields.file.details.image.height,
-      },
-      isAvailable: item.fields.disponible,
-      size: item.fields.medida,
-      year: item.fields.year,
-      place: item.fields.lugar,
-      type: item.fields.type || "Óleo sobre lienzo",
-      collection: item.fields.collection || "none",
-    };
+  const filtered = collection?.fields.pinturas.filter(
+    (paint: any) => paint.fields
+  );
+  const paintings = filtered.map((item: any) => {
+    if (item.fields) {
+      return {
+        title: item.fields?.titulo,
+        image: {
+          url: item.fields.foto.fields.file.url,
+          width: item.fields.foto.fields.file.details.image.width,
+          height: item.fields.foto.fields.file.details.image.height,
+        },
+        isAvailable: item.fields.disponible,
+        size: item.fields.medida,
+        year: item.fields.year,
+        place: item.fields.lugar,
+        type: item.fields.type || "Óleo sobre lienzo",
+        collection: item.fields.collection || "none",
+      };
+    }
   });
 
   return (
