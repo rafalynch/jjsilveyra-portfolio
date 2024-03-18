@@ -14,6 +14,7 @@ function HomeImage({ homeImage }: HomeImageProps) {
 
   return (
     <Image
+      unoptimized
       className={styles.image}
       layout="fill"
       objectFit="cover"

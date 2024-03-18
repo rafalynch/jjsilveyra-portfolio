@@ -22,6 +22,7 @@ export default function PaintingCard({
 
   return (
     <Image
+      unoptimized
       onClick={handleClick}
       className={styles.image}
       width={painting.image.width}

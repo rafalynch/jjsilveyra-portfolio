@@ -16,6 +16,7 @@ export default function CollectionBanner({
       <div className={styles.col_container}>
         <h3 className={styles.title}>{collection.title}</h3>
         <Image
+          unoptimized
           className={styles.image}
           layout="fill"
           objectFit="cover"

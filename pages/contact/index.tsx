@@ -15,7 +15,12 @@ export default function Collections() {
               passHref
             >
               <div className={styles.social}>
-                <Image layout="fill" src="/instagram.png" alt="instagram" />
+                <Image
+                  unoptimized
+                  layout="fill"
+                  src="/instagram.png"
+                  alt="instagram"
+                />
               </div>
             </Link>
             <Link
@@ -28,7 +33,12 @@ export default function Collections() {
           <div className={styles.container}>
             <Link href={"mailto:javierjsilveyra@gmail.com"} passHref>
               <div className={styles.social}>
-                <Image layout="fill" src="/email.png" alt="instagram" />
+                <Image
+                  unoptimized
+                  layout="fill"
+                  src="/email.png"
+                  alt="instagram"
+                />
               </div>
             </Link>
             <Link href={"mailto:javierjsilveyra@gmail.com"} passHref>

@@ -25,6 +25,7 @@ function Bio({ data }: BioProps) {
           </div>
           <div className={styles.imageContainer}>
             <Image
+              unoptimized
               src={"https:" + data.fields.foto1.fields.file.url}
               alt="foto1"
               layout="fill"
@@ -36,6 +37,7 @@ function Bio({ data }: BioProps) {
           {!mobile && (
             <div className={styles.imageContainer}>
               <Image
+                unoptimized
                 src={"https:" + data.fields.foto2.fields.file.url}
                 alt="foto1"
                 layout="fill"
@@ -50,6 +52,7 @@ function Bio({ data }: BioProps) {
             {mobile && (
               <div className={styles.imageContainer}>
                 <Image
+                  unoptimized
                   src={"https:" + data.fields.foto2.fields.file.url}
                   alt="foto1"
                   layout="fill"
@@ -58,6 +61,7 @@ function Bio({ data }: BioProps) {
               </div>
             )}
             <Image
+              unoptimized
               src={"/firma.jpg"}
               alt="foto1"
               layout="intrinsic"
