@@ -8,16 +8,17 @@ import { Collection } from "../../types";
 import { AppContext } from "next/app";
 import { GetServerSideProps } from "next";
 import MainGallery from "../../components/MainGallery";
+import Slideshow from "../../components/Slideshow";
 
 interface CollectionsProps {
   collection: any;
 }
 
 function CollectionPage({ collection }: CollectionsProps) {
-  const filtered = collection?.fields.pinturas.filter(
+  const filtered = collection?.fields?.pinturas?.filter(
     (paint: any) => paint.fields
   );
-  const paintings = filtered.map((item: any) => {
+  const paintings = filtered?.map((item: any) => {
     if (item.fields) {
       return {
         title: item.fields?.titulo,
@@ -41,7 +42,7 @@ function CollectionPage({ collection }: CollectionsProps) {
       <Layout>
         <>
           <h1 className={styles.title}>{collection.fields.title}</h1>
-          {paintings && <MainGallery paintings={paintings}></MainGallery>}
+          {paintings && <Slideshow slides={paintings} />}
         </>
       </Layout>
     </>

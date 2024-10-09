@@ -2,7 +2,7 @@ import { EntryCollection } from "contentful";
 import React from "react";
 
 import Layout from "../../components/Layout";
-import MainGallery from "../../components/MainGallery";
+import Slideshow from "../../components/Slideshow";
 import { getAllPaintings } from "../../services/api";
 
 interface GalleryProps {
@@ -32,7 +32,7 @@ function Gallery({ data }: GalleryProps) {
   return (
     <>
       <Layout>
-        <MainGallery paintings={paintings}></MainGallery>
+        <Slideshow slides={paintings} />
       </Layout>
     </>
   );

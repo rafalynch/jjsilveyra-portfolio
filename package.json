@@ -23,7 +23,8 @@
     "react-image-zooom": "^1.0.4",
     "react-medium-image-zoom": "^5.0.1",
     "safe-json-stringify": "^1.2.0",
-    "styled-components": "^5.3.5"
+    "styled-components": "^5.3.5",
+    "swiper": "^11.1.14"
   },
   "devDependencies": {
     "@types/node": "17.0.21",
