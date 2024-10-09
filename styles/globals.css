@@ -10,6 +10,7 @@ body {
   margin: 0;
   font-family: "Rufina", serif;
   transition: all 1s;
+  background-color: #f0f0f0;
 }
 
 a {
@@ -18,4 +19,20 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background-color: #000 !important;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: #000 !important;
+}
+
+@media (max-width: 720px) {
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: none !important;
+  }
 }
