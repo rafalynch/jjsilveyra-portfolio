@@ -30,7 +30,7 @@ export default function Slideshow(props) {
         >
           {props.slides.map((slide) => {
             return (
-              <SwiperSlide className={styles.swiperSlide}>
+              <SwiperSlide className={styles.swiperSlide} key={slide.title + "_slide"}>
                 <img
                   className={styles.swiperImage}
                   src={"https:" + slide.image.url}
@@ -45,6 +45,7 @@ export default function Slideshow(props) {
         {props.slides.map((slide) => {
           return (
             <img
+            key={slide.title + "_slide_img"}
               className={styles.swiperImage}
               src={"https:" + slide.image.url}
               alt={slide.title}
